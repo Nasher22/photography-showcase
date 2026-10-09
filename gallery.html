@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoVoyage - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">PhotoVoyage</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+<div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="landscape">Landscape</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="urban">Urban</button>
+            </div>
+            <div class="gallery-search">
+                <input type="text" id="gallerySearch" placeholder="Search images...">
+                <button id="searchBtn">🔍</button>
+            </div>
+            <div class="gallery-grid">
+            <div class="gallery-item" data-category="portrait" data-img="assets/images/img1.jpg">
+                <img src="assets/images/img1.jpg" alt="Photography 1">
+                <div class="image-caption">
+                    <h3>Golden Hour Dreams</h3>
+                    <p>Capturing the magic of sunset moments</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="wedding" data-img="assets/images/img2.jpg">
+                <img src="assets/images/img2.jpg" alt="Photography 2">
+                <div class="image-caption">
+                    <h3>Eternal Bond</h3>
+                    <p>Wedding photography that lasts a lifetime</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="urban" data-img="assets/images/img3.jpg">
+                <img src="assets/images/img3.jpg" alt="Photography 3">
+                <div class="image-caption">
+                    <h3>Urban Whisper</h3>
+                    <p>Cityscapes in serene moments</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait" data-img="assets/images/img4.jpg">
+                <img src="assets/images/img4.jpg" alt="Photography 4">
+                <div class="image-caption">
+                    <h3>Natural Beauty</h3>
+                    <p>Discovering elegance in simplicity</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="urban" data-img="assets/images/img5.jpg">
+                <img src="assets/images/img5.jpg" alt="Photography 5">
+                <div class="image-caption">
+                    <h3>Urban Alchemy</h3>
+                    <p>Metropolitan scenes transformed through creative perspective</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="landscape" data-img="assets/images/img6.jpg">
+                <img src="assets/images/img6.jpg" alt="Photography 6">
+                <div class="image-caption">
+                    <h3>Cultural Tapestry</h3>
+                    <p>Colors and textures that tell stories of tradition</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">×</span>
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-nav">
+            <span class="prev">❮</span>
+            <span class="next">❯</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PhotoVoyage</h3>
+                <p>Professional photography services for all your special moments.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: photovoyageph@gmail.com</p>
+                <p>Phone: +63 0961 504 5348</p>
+                <p>Location: Lucena City, Quezon, Philippines</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PhotoVoyage. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
