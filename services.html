@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services &amp; Pricing - PhotoVoyage Photography Showcase</title>
+    <meta name="description" content="Photography packages and pricing from PhotoVoyage, Lucena City: portrait sessions, wedding coverage and event photography.">
+    <link rel="canonical" href="https://photovoyage.example/services.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PhotoVoyage">
+    <meta property="og:title" content="Services &amp; Pricing - PhotoVoyage">
+    <meta property="og:description" content="Portrait, wedding and event photography packages from PhotoVoyage.">
+    <meta property="og:url" content="https://photovoyage.example/services.html">
+    <meta property="og:image" content="https://photovoyage.example/assets/images/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- #nav -->
+    <header class="header" id="site-header">
+        <nav class="nav-container" aria-label="Main">
+            <a class="logo" href="index.html">PhotoVoyage</a>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a class="nav-cta" href="services.html#booking">Book a Shoot</a>
+                <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+<!-- /#nav -->
+
+    <main id="main">
+
+        <section class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Services &amp; Pricing</h1>
+                    <p>Transparent packages, no hidden fees. Every session includes edited, high-resolution images.</p>
+                </div>
+
+                <div class="pricing-grid">
+
+                    <article class="pricing-card">
+                        <h2>Portrait</h2>
+                        <p class="pricing-tagline">Studio or on-location</p>
+                        <p class="pricing-price"><span class="pricing-currency">&#8369;</span>4,500 <span class="pricing-unit">/ session</span></p>
+                        <ul class="pricing-features">
+                            <li>1 hour session</li>
+                            <li>1 outfit change</li>
+                            <li>20 edited high-resolution photos</li>
+                            <li>Online gallery delivery</li>
+                            <li>5-day turnaround</li>
+                        </ul>
+                        <a class="cta-button cta-button--solid" href="#booking">Book Portrait</a>
+                    </article>
+
+                    <article class="pricing-card pricing-card--featured">
+                        <p class="pricing-badge">Most Popular</p>
+                        <h2>Wedding</h2>
+                        <p class="pricing-tagline">Full-day coverage</p>
+                        <p class="pricing-price"><span class="pricing-currency">&#8369;</span>18,000 <span class="pricing-unit">/ 8 hours</span></p>
+                        <ul class="pricing-features">
+                            <li>8 hours of coverage</li>
+                            <li>Second shooter included</li>
+                            <li>400+ edited photos</li>
+                            <li>Pre-wedding consultation</li>
+                            <li>Printed 8x10 album</li>
+                            <li>Online gallery with download</li>
+                            <li>21-day turnaround</li>
+                        </ul>
+                        <a class="cta-button cta-button--solid" href="#booking">Book Wedding</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h2>Event</h2>
+                        <p class="pricing-tagline">Parties, debut, corporate</p>
+                        <p class="pricing-price"><span class="pricing-currency">&#8369;</span>7,500 <span class="pricing-unit">/ 4 hours</span></p>
+                        <ul class="pricing-features">
+                            <li>4 hours of coverage</li>
+                            <li>150 edited high-resolution photos</li>
+                            <li>Group and detail shots</li>
+                            <li>Same-week social media preview</li>
+                            <li>7-day turnaround</li>
+                        </ul>
+                        <a class="cta-button cta-button--solid" href="#booking">Book Event</a>
+                    </article>
+
+                </div>
+
+                <p class="pricing-note">Prices above are <strong>placeholders</strong> - replace with your real rates before going live. Travel outside Lucena City is quoted separately.</p>
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking">
+            <div class="container">
+                <div class="booking-container">
+                    <h2>Request a Booking</h2>
+                    <p class="booking-intro">Tell us what you have in mind. We reply within 24 hours with availability and a final quote.</p>
+
+                    <form class="booking-form" id="booking-form" method="POST" novalidate>
+                        <div class="form-group">
+                            <label for="bk-name">Your Name</label>
+                            <input id="bk-name" name="name" type="text" autocomplete="name" required aria-describedby="bk-name-error">
+                            <p class="form-error" id="bk-name-error" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="bk-email">Your Email</label>
+                            <input id="bk-email" name="email" type="email" autocomplete="email" required aria-describedby="bk-email-error">
+                            <p class="form-error" id="bk-email-error" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="bk-phone">Your Phone</label>
+                            <input id="bk-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="bk-phone-error">
+                            <p class="form-error" id="bk-phone-error" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="bk-service">Service Needed</label>
+                            <select id="bk-service" name="service" required aria-describedby="bk-service-error">
+                                <option value="">Please choose...</option>
+                                <option value="portrait">Portrait Session</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="event">Event</option>
+                                <option value="other">Something else</option>
+                            </select>
+                            <p class="form-error" id="bk-service-error" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="bk-date">Preferred Date</label>
+                            <input id="bk-date" name="preferred_date" type="date" aria-describedby="bk-date-error">
+                            <p class="form-error" id="bk-date-error" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="bk-message">Details</label>
+                            <textarea id="bk-message" name="message" rows="5" placeholder="Where, how many people, what you have in mind..." aria-describedby="bk-message-error"></textarea>
+                            <p class="form-error" id="bk-message-error" aria-live="polite"></p>
+                        </div>
+                        <button class="booking-button" type="submit">Send Booking Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="close-lightbox" type="button" aria-label="Close image viewer">&times;</button>
+        <button class="lightbox-arrow prev" type="button" aria-label="Previous image">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
+        </div>
+        <button class="lightbox-arrow next" type="button" aria-label="Next image">&#10095;</button>
+        <p class="lightbox-counter" id="lightbox-counter" aria-live="polite"></p>
+    </div>
+
+    <a class="whatsapp-fab" href="https://wa.me/639615045348" target="_blank" rel="noopener" aria-label="Chat with PhotoVoyage on WhatsApp">WhatsApp</a>
+    <button class="back-to-top" type="button" id="back-to-top" aria-label="Back to top">&#8679;</button>
+
+<!-- #footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>PhotoVoyage</h3>
+                <p>Professional photography services for all your special moments.</p>
+                <div class="social-links">
+                    <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="PhotoVoyage on Instagram">ig</a>
+                    <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="PhotoVoyage on Facebook">fb</a>
+                    <a class="social-link" href="mailto:photovoyageph@gmail.com" aria-label="Email PhotoVoyage">@</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: <a href="mailto:photovoyageph@gmail.com">photovoyageph@gmail.com</a></p>
+                <p>Phone: <a href="tel:+639615045348">+63 0961 504 5348</a></p>
+                <p>Location: Lucena City, Quezon, Philippines</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2026</span> PhotoVoyage. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- /#footer -->
+
+    <script src="script.js"></script>
+</body>
+</html>

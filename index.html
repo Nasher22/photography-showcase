@@ -3,71 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoVoyage - Photography Showcase</title>
+    <title>PhotoVoyage - Photography Showcase in Lucena City, Philippines</title>
+    <meta name="description" content="PhotoVoyage is a photography studio in Lucena City, Quezon, Philippines. Portrait, wedding, event and landscape photography with over 10 years of experience.">
+    <link rel="canonical" href="https://photovoyage.example/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PhotoVoyage">
+    <meta property="og:title" content="PhotoVoyage - Photography Showcase">
+    <meta property="og:description" content="Professional photography services in Lucena City, Quezon for all your special moments.">
+    <meta property="og:url" content="https://photovoyage.example/index.html">
+    <meta property="og:image" content="https://photovoyage.example/assets/images/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PhotographAction",
+      "name": "PhotoVoyage",
+      "description": "Professional photography services for portraits, weddings, events and landscapes.",
+      "url": "https://photovoyage.example/",
+      "image": "https://photovoyage.example/assets/images/og-cover.jpg",
+      "email": "photovoyageph@gmail.com",
+      "telephone": "+63-961-504-5348",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lucena City",
+        "addressLocality": "Lucena City",
+        "addressRegion": "Quezon",
+        "addressCountry": "PH"
+      },
+      "areaServed": "Quezon Province, Philippines",
+      "openingHours": "Mo-Sa 09:00-18:00"
+    }
+    </script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">PhotoVoyage</div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- #nav -->
+    <header class="header" id="site-header">
+        <nav class="nav-container" aria-label="Main">
+            <a class="logo" href="index.html">PhotoVoyage</a>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <a class="nav-cta" href="services.html#booking">Book a Shoot</a>
+                <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+<!-- /#nav -->
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Capturing Moments,<br>Creating Memories</h1>
-            <p>Professional photography services for all your special moments</p>
-            <a href="gallery.html" class="cta-button">Explore Gallery</a>
-        </div>
-    </section>
+    <main id="main">
 
-    <div class="lightbox" id="lightbox">
-        <span class="close-lightbox">×</span>
-        <img src="" alt="" id="lightbox-img">
-        <div class="lightbox-nav">
-            <span class="prev">❮</span>
-            <span class="next">❯</span>
+        <section class="hero">
+            <picture class="hero-media">
+                <source type="image/webp" srcset="assets/img/hero-800.webp 800w, assets/img/hero-1600.webp 1080w" sizes="100vw">
+                <img src="assets/images/55fe0f70-4b41-4eac-8c53-82e00472a443.jpg" width="1080" height="805" fetchpriority="high" decoding="async" alt="Golden hour landscape photographed by PhotoVoyage">
+            </picture>
+            <div class="hero-content">
+                <h1>Capturing Moments,<br>Creating Memories</h1>
+                <p>Professional photography services for all your special moments</p>
+                <a href="gallery.html" class="cta-button">Explore Gallery</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Our Team</h2>
+                        <p>We are a passionate photographers with over 10 years of experience capturing life's most precious moments. Our journey into photography began with a simple Kodak camera, and has evolved into a professional career where we specialize in portrait, landscape, and event photography.</p>
+                        <p>Our goal is to transform ordinary moments into extraordinary memories through the art of photography. Each shot tells a story, and we strive to capture those stories with authenticity and beauty.</p>
+                        <p>We believe that photography is more than just taking pictures - it's about creating connections, preserving memories, and telling stories through visual art. Our approach combines technical expertise with creative vision to deliver images that resonate deeply with clients and viewers alike.</p>
+                    </div>
+                </div>
+                <div class="stats-counter" id="stats-counter">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="500" data-suffix="+">0</span>
+                        <span class="counter-label">Projects Completed</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="10" data-suffix="+">0</span>
+                        <span class="counter-label">Years Experience</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="1000" data-suffix="+">0</span>
+                        <span class="counter-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="testimonials-title">What Clients Say</h2>
+                    <p>Kind words from the people we have photographed across Quezon.</p>
+                </div>
+                <div class="testimonial-slider" id="testimonial-slider" aria-roledescription="carousel" aria-label="Client testimonials">
+                    <div class="testimonial-track">
+                        <figure class="testimonial active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                            <blockquote class="testimonial-text">Placeholder testimonial - replace with a real client quote before launch.</blockquote>
+                            <figcaption>
+                                <span class="testimonial-author">Client Name</span>
+                                <span class="testimonial-role">Wedding, Lucena City</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="testimonial" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                            <blockquote class="testimonial-text">Placeholder testimonial - replace with a real client quote before launch.</blockquote>
+                            <figcaption>
+                                <span class="testimonial-author">Client Name</span>
+                                <span class="testimonial-role">Portrait Session</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="testimonial" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                            <blockquote class="testimonial-text">Placeholder testimonial - replace with a real client quote before launch.</blockquote>
+                            <figcaption>
+                                <span class="testimonial-author">Client Name</span>
+                                <span class="testimonial-role">Event Coverage</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="testimonial-nav" id="testimonial-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="get-in-touch">
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p>Ready to capture your special moments? Send us your details and we will get back to you within 24 hours.</p>
+                <form class="contact-form" id="contact-form" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="cf-name">Your Name</label>
+                        <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-error">
+                        <p class="form-error" id="cf-name-error" aria-live="polite"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Your Email</label>
+                        <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error">
+                        <p class="form-error" id="cf-email-error" aria-live="polite"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Your Message</label>
+                        <textarea id="cf-message" name="message" rows="6" required aria-describedby="cf-message-error"></textarea>
+                        <p class="form-error" id="cf-message-error" aria-live="polite"></p>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="close-lightbox" type="button" aria-label="Close image viewer">&times;</button>
+        <button class="lightbox-arrow prev" type="button" aria-label="Previous image">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
         </div>
+        <button class="lightbox-arrow next" type="button" aria-label="Next image">&#10095;</button>
+        <p class="lightbox-counter" id="lightbox-counter" aria-live="polite"></p>
     </div>
 
+    <a class="whatsapp-fab" href="https://wa.me/639615045348" target="_blank" rel="noopener" aria-label="Chat with PhotoVoyage on WhatsApp">WhatsApp</a>
+    <button class="back-to-top" type="button" id="back-to-top" aria-label="Back to top">&#8679;</button>
+
+<!-- #footer -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="container footer-content">
             <div class="footer-section">
                 <h3>PhotoVoyage</h3>
                 <p>Professional photography services for all your special moments.</p>
+                <div class="social-links">
+                    <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="PhotoVoyage on Instagram">ig</a>
+                    <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="PhotoVoyage on Facebook">fb</a>
+                    <a class="social-link" href="mailto:photovoyageph@gmail.com" aria-label="Email PhotoVoyage">@</a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p>Email: photovoyageph@gmail.com</p>
-                <p>Phone: +63 0961 504 5348</p>
+                <p>Email: <a href="mailto:photovoyageph@gmail.com">photovoyageph@gmail.com</a></p>
+                <p>Phone: <a href="tel:+639615045348">+63 0961 504 5348</a></p>
                 <p>Location: Lucena City, Quezon, Philippines</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 PhotoVoyage. All rights reserved.</p>
+            <p>&copy; <span id="year">2026</span> PhotoVoyage. All rights reserved.</p>
         </div>
     </footer>
+<!-- /#footer -->
 
     <script src="script.js"></script>
 </body>

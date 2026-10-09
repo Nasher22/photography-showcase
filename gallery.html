@@ -3,120 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoVoyage - Gallery</title>
+    <title>Gallery - PhotoVoyage Photography Showcase</title>
+    <meta name="description" content="Browse the PhotoVoyage photography gallery: portraits, weddings, urban and landscape photography from Lucena City, Quezon.">
+    <link rel="canonical" href="https://photovoyage.example/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PhotoVoyage">
+    <meta property="og:title" content="Gallery - PhotoVoyage">
+    <meta property="og:description" content="Portrait, wedding, urban and landscape photography by PhotoVoyage.">
+    <meta property="og:url" content="https://photovoyage.example/gallery.html">
+    <meta property="og:image" content="https://photovoyage.example/assets/images/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">PhotoVoyage</div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- #nav -->
+    <header class="header" id="site-header">
+        <nav class="nav-container" aria-label="Main">
+            <a class="logo" href="index.html">PhotoVoyage</a>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <a class="nav-cta" href="services.html#booking">Book a Shoot</a>
+                <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+<!-- /#nav -->
 
-<div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="portrait">Portrait</button>
-                <button class="filter-btn" data-filter="landscape">Landscape</button>
-                <button class="filter-btn" data-filter="wedding">Wedding</button>
-                <button class="filter-btn" data-filter="urban">Urban</button>
-            </div>
-            <div class="gallery-search">
-                <input type="text" id="gallerySearch" placeholder="Search images...">
-                <button id="searchBtn">🔍</button>
-            </div>
-            <div class="gallery-grid">
-            <div class="gallery-item" data-category="portrait" data-img="assets/images/img1.jpg">
-                <img src="assets/images/img1.jpg" alt="Photography 1">
-                <div class="image-caption">
-                    <h3>Golden Hour Dreams</h3>
-                    <p>Capturing the magic of sunset moments</p>
+    <main id="main">
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Our Gallery</h1>
+                    <p>Our selection of portraits, weddings, cityscapes and landscapes captured by our team.</p>
+                </div>
+
+                <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+                    <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn" type="button" data-filter="portrait" aria-pressed="false">Portrait</button>
+                    <button class="filter-btn" type="button" data-filter="landscape" aria-pressed="false">Landscape</button>
+                    <button class="filter-btn" type="button" data-filter="wedding" aria-pressed="false">Wedding</button>
+                    <button class="filter-btn" type="button" data-filter="urban" aria-pressed="false">Urban</button>
+                </div>
+
+                <form class="gallery-search" role="search" id="gallery-search">
+                    <label class="sr-only" for="gallerySearch">Search gallery by title or description</label>
+                    <input type="search" id="gallerySearch" name="q" placeholder="Search images..." autocomplete="off">
+                    <button type="submit">Search</button>
+                </form>
+
+                <p class="gallery-status" id="gallery-status" role="status" aria-live="polite"></p>
+
+                <div class="gallery-grid" id="gallery-grid">
+
+                    <button class="gallery-item" type="button" data-category="portrait" data-title="Golden Hour Dreams" data-desc="Capturing the magic of sunset moments" aria-label="Golden Hour Dreams, portrait">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img1-800.webp 800w, assets/img/img1-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img1.jpg" width="1920" height="1280" alt="Golden Hour Dreams" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Golden Hour Dreams</span>
+                            <span class="image-desc">Capturing the magic of sunset moments</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="wedding" data-title="Eternal Bond" data-desc="Wedding photography that lasts a lifetime" aria-label="Eternal Bond, wedding">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img2-800.webp 800w, assets/img/img2-1600.webp 1500w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img2.jpg" width="1500" height="1500" alt="Eternal Bond" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Eternal Bond</span>
+                            <span class="image-desc">Wedding photography that lasts a lifetime</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="urban" data-title="Urban Whisper" data-desc="Cityscapes in serene moments" aria-label="Urban Whisper, urban">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img3-800.webp 800w, assets/img/img3-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img3.jpg" width="2602" height="1960" alt="Urban Whisper" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Urban Whisper</span>
+                            <span class="image-desc">Cityscapes in serene moments</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="portrait" data-title="Golden Whisper" data-desc="Afternoon light on the open field" aria-label="Golden Whisper, portrait">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img4-800.webp 800w, assets/img/img4-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img4.jpg" width="1600" height="1200" alt="Golden Whisper" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Golden Whisper</span>
+                            <span class="image-desc">Afternoon light on the open field</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="urban" data-title="City After Dark" data-desc="Long exposure beneath the bridge lights" aria-label="City After Dark, urban">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img5-800.webp 800w, assets/img/img5-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img5.jpg" width="1600" height="1200" alt="City After Dark" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">City After Dark</span>
+                            <span class="image-desc">Long exposure beneath the bridge lights</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="landscape" data-title="Rolling Gold" data-desc="Hills turning amber at the end of the day" aria-label="Rolling Gold, landscape">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img6-800.webp 800w, assets/img/img6-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img6.jpg" width="1600" height="1200" alt="Rolling Gold" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Rolling Gold</span>
+                            <span class="image-desc">Hills turning amber at the end of the day</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="wedding" data-title="Held Close" data-desc="Quiet moments between the vows" aria-label="Held Close, wedding">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img7-800.webp 800w, assets/img/img7-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img7.jpg" width="1600" height="1200" alt="Held Close" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Held Close</span>
+                            <span class="image-desc">Quiet moments between the vows</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="urban" data-title="Concrete &amp; Sky" data-desc="A city unfolding in layers" aria-label="Concrete and Sky, urban">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img8-800.webp 800w, assets/img/img8-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img8.jpg" width="1600" height="1200" alt="Concrete and Sky" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Concrete &amp; Sky</span>
+                            <span class="image-desc">A city unfolding in layers</span>
+                        </span>
+                    </button>
+
+                    <button class="gallery-item" type="button" data-category="landscape" data-title="Into the Mist" data-desc="Where the road disappears" aria-label="Into the Mist, landscape">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/img9-800.webp 800w, assets/img/img9-1600.webp 1600w" sizes="(max-width:768px) 100vw, 380px">
+                            <img src="assets/images/img9.jpg" width="1600" height="1200" alt="Into the Mist" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="image-caption">
+                            <span class="image-title">Into the Mist</span>
+                            <span class="image-desc">Where the road disappears</span>
+                        </span>
+                    </button>
+
                 </div>
             </div>
-            <div class="gallery-item" data-category="wedding" data-img="assets/images/img2.jpg">
-                <img src="assets/images/img2.jpg" alt="Photography 2">
-                <div class="image-caption">
-                    <h3>Eternal Bond</h3>
-                    <p>Wedding photography that lasts a lifetime</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="urban" data-img="assets/images/img3.jpg">
-                <img src="assets/images/img3.jpg" alt="Photography 3">
-                <div class="image-caption">
-                    <h3>Urban Whisper</h3>
-                    <p>Cityscapes in serene moments</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-img="assets/images/img4.jpg">
-                <img src="assets/images/img4.jpg" alt="Photography 4">
-                <div class="image-caption">
-                    <h3>Natural Beauty</h3>
-                    <p>Discovering elegance in simplicity</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="urban" data-img="assets/images/img5.jpg">
-                <img src="assets/images/img5.jpg" alt="Photography 5">
-                <div class="image-caption">
-                    <h3>Urban Alchemy</h3>
-                    <p>Metropolitan scenes transformed through creative perspective</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="landscape" data-img="assets/images/img6.jpg">
-                <img src="assets/images/img6.jpg" alt="Photography 6">
-                <div class="image-caption">
-                    <h3>Cultural Tapestry</h3>
-                    <p>Colors and textures that tell stories of tradition</p>
-                </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="close-lightbox" type="button" aria-label="Close image viewer">&times;</button>
+        <button class="lightbox-arrow prev" type="button" aria-label="Previous image">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
             </div>
         </div>
-    </section>
-
-    <div class="lightbox" id="lightbox">
-        <span class="close-lightbox">×</span>
-        <img src="" alt="" id="lightbox-img">
-        <div class="lightbox-nav">
-            <span class="prev">❮</span>
-            <span class="next">❯</span>
-        </div>
+        <button class="lightbox-arrow next" type="button" aria-label="Next image">&#10095;</button>
+        <p class="lightbox-counter" id="lightbox-counter" aria-live="polite"></p>
     </div>
 
+    <button class="back-to-top" type="button" id="back-to-top" aria-label="Back to top">&#8679;</button>
+
+<!-- #footer -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="container footer-content">
             <div class="footer-section">
                 <h3>PhotoVoyage</h3>
                 <p>Professional photography services for all your special moments.</p>
+                <div class="social-links">
+                    <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="PhotoVoyage on Instagram">ig</a>
+                    <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="PhotoVoyage on Facebook">fb</a>
+                    <a class="social-link" href="mailto:photovoyageph@gmail.com" aria-label="Email PhotoVoyage">@</a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p>Email: photovoyageph@gmail.com</p>
-                <p>Phone: +63 0961 504 5348</p>
+                <p>Email: <a href="mailto:photovoyageph@gmail.com">photovoyageph@gmail.com</a></p>
+                <p>Phone: <a href="tel:+639615045348">+63 0961 504 5348</a></p>
                 <p>Location: Lucena City, Quezon, Philippines</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 PhotoVoyage. All rights reserved.</p>
+            <p>&copy; <span id="year">2026</span> PhotoVoyage. All rights reserved.</p>
         </div>
     </footer>
+<!-- /#footer -->
 
     <script src="script.js"></script>
 </body>
